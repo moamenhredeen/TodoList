@@ -1,0 +1,14 @@
+
+
+<div *ngIf="modalState"  class="overlay" ></div>
+<div *ngIf="modalState" class="modal">
+  <div class="header"><h2>Header</h2></div>
+  <div class="body">
+    <input [(ngModel)]="header" class="control" name="header" id="header" placeholder="enter the header">
+    <textarea [(ngModel)]="body" class="control" name="body" id="body" cols="30" rows="10" placeholder="enter the body"></textarea>
+  </div>
+  <div class="actions">
+    <button  class="action cancel" (click)="onClose()" >cancel</button>
+    <button class="action save" (click)="onSave()">save</button>
+  </div>
+</div>

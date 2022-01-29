@@ -1,0 +1,74 @@
+
+.modal{
+  position: fixed;
+  top: 100px;
+  left: 50%;
+  transform: translate(-50%);
+  width:800px;
+  z-index: 200;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+
+  .header{
+    background-color: yellowgreen;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .body{
+    display:flex;
+    flex-direction: column;
+    padding: 25px;
+    gap:10px;
+
+    .control{
+      padding: 15px 10px;
+      border-radius: 5px;
+      border:none;
+      background-color: rgba(0, 0, 0, 0.1);
+      &:focus{
+        outline:none;
+      }
+    }
+  }
+
+  .actions{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    button{
+      background-color: yellowgreen;
+      border: none;
+      outline: none;
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      border-radius: 5px;
+      &:hover{
+        box-shadow: 0 0 0 2px white, 0 0 0 4px yellowgreen;
+        transition: .2s;
+      }
+    }
+  }
+}
+
+.overlay{
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+

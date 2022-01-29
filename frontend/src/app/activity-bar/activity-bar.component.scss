@@ -1,0 +1,21 @@
+.activity-bar{
+  position: fixed;
+  height: 100vw;
+  width: 100px;
+  background-color: yellowgreen;
+}
+
+a{
+  display:block;
+  width: 100%;
+  padding: 25px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 2rem;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  &:hover{
+    background-color: yellow;
+  }
+}

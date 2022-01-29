@@ -1,0 +1,95 @@
+@import "src/styles";
+
+.todo-list{
+  padding: 10px;
+  .header{
+    margin: 50px 0 25px 0;
+    display: flex;
+    gap: 5px;
+    input{
+      width: 100%;
+      padding: 10px;
+      border: none;
+      background-color: rgba(0, 0, 0, 0.1);
+      font-size: 1.5rem;
+      border-radius: 5px;
+      &:hover{
+        box-shadow: 0 0 0 2px white, 0 0 0 4px rgba(0, 0, 0, 0.1);
+        transition: .2s;
+      }
+
+      &:focus{
+        outline: none;
+        border: none;
+        box-shadow: 0 0 0 2px white, 0 0 0 4px rgba(0, 0, 0, 0.1);
+        transition: .2s;
+      }
+    }
+    button{
+      border-radius: 5px;
+      background-color: yellowgreen;
+      border: none;
+      width: 10%;
+      font-size: 1.5rem;
+      font-weight: bold;
+      cursor: pointer;
+      &:hover{
+        box-shadow: 0 0 0 2px white, 0 0 0 4px yellowgreen;
+        transition: .2s;
+      }
+    }
+  }
+  .body{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 25px;
+  }
+}
+
+
+.todo-item{
+  position: relative;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  overflow: hidden;
+  transition:.3s;
+  cursor:pointer;
+
+  &:hover{
+    transform:scale(1.1);
+    transition:.3s;
+  }
+
+  .header{
+    margin: 0;
+    background-color: yellowgreen;
+    padding: 10px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  .body{
+    padding: 10px;
+  }
+
+  .actions{
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    .delete{
+      button{
+        border-radius: 5px;
+        background-color: yellowgreen;
+        padding:10px 15px;
+        border: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        cursor: pointer;
+        &:hover{
+          box-shadow: 0 0 0 2px white, 0 0 0 4px yellowgreen;
+          transition: .2s;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+
+<div class="todo-list">
+  <modal
+    [modalState]="modalVisibility"
+    (state)="syncModalState($event)"
+    (save)="onSaveHandler($event)"
+  ></modal>
+  <div class="header">
+    <input type="text" name="searchKeyword" placeholder="search" [(ngModel)]="searchKeyword">
+    <button (click)="toggleModal()" >ADD</button>
+  </div>
+  <div class="body" >
+    <div class="todo-item" *ngFor="let todoItem of filteredTodos">
+      <div class="header">
+        <a [routerLink]="['/todo-item', todoItem.id]">
+        {{todoItem.header}}
+        </a>
+      </div>
+      <div class="body">
+        {{todoItem.body}}
+      </div>
+      <div class="actions">
+        <div class="delete">
+          <button>Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
